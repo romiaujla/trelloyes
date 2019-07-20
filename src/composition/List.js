@@ -1,29 +1,26 @@
 import React from 'react';
 import Card from './Card.js';
 
-function AllCards(props){
-    const allCardsComponent = props.cards.map(card => {
-        // console.log(allCards[card],title);
-        console.log(card);  
-        return (<Card key={card} title={card.title} content={card.content} />);
-    });
-    console.log("end of list");
-    return (
-        <ul className="card-list">
-            {allCardsComponent}
-        </ul>
-    );
-}
+class List extends React.Component {
+    
+    render(){
+        const props = this.props;
+        return (
+            <section className="cards-list-section">
+                <header className="cards-list-header">
+                    <h2>{props.header}</h2>
+                </header>
 
-function List(props){
-    return (
-        <section className="cards-list-section">
-            <header className="cards-list-header">
-                {props.header}
-            </header>
-            <AllCards cards={props.cards} />
-        </section>
-    );
+                <ul className="card-list">
+                    {props.cards.map((card) => <Card key={card.id} title={card.title} content={card.content} />)}
+                </ul>
+
+                <div className="add-random-card">
+                    <button type="button" className="add-random-card-button">+ Add Random Card</button>
+                </div>
+            </section>
+        );
+    }
 }
 
 export default List;
