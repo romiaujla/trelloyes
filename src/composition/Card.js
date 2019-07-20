@@ -5,7 +5,7 @@ function Card(props){
         <li className="card">
             <div className="flex-div">
                 <h3>{props.title}</h3>
-                <button type="button" class="card-delete-button">delete</button>
+                <button type="button" className="card-delete-button">delete</button>
             </div>
             <p>{props.content}</p>
         </li>

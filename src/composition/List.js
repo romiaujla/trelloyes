@@ -2,10 +2,15 @@ import React from 'react';
 import Card from './Card.js';
 
 function AllCards(props){
-    const allCards = props.cards.map(card => <Card title={card.title} content={card.content} />);
+    const allCardsComponent = props.cards.map(card => {
+        // console.log(allCards[card],title);
+        console.log(card);  
+        return (<Card key={card} title={card.title} content={card.content} />);
+    });
+    console.log("end of list");
     return (
         <ul className="card-list">
-            {allCards}
+            {allCardsComponent}
         </ul>
     );
 }
@@ -13,9 +18,9 @@ function AllCards(props){
 function List(props){
     return (
         <section className="cards-list-section">
-            <Header className="cards-list-header">
+            <header className="cards-list-header">
                 {props.header}
-            </Header>
+            </header>
             <AllCards cards={props.cards} />
         </section>
     );
