@@ -1,9 +1,85 @@
-section, header, h1, h2, h3, h4, h5, h6,
+/* Main App Style */
+*{
+  box-sizing: border-box;
+}
+
+body, main, section, header, h1, h2, h3, h4, h5, h6,
 button, p, div, ul, li{
   padding: 0px;
   margin: 0px;
 }
-
+li{
+  list-style: none;
+}
+body{ 
+  background: skyblue;
+}
 .app{
-  background: lightblue;
+  padding: 20px;
+}
+
+.app-header{
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+
+.all-lists{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+button{
+  cursor: pointer;
+}
+
+/* List Style */
+.all-lists section{
+  margin-right: 20px;
+  margin-top: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  background: #DFE3ED;
+  height: 100%;
+}
+
+.card-list{
+  min-width: 175px;
+}
+.cards-list-header{
+  font-size: 0.8em;
+}
+
+.add-random-card-button{
+  border: none;
+  background: inherit;
+  font-weight: 600;
+}
+
+/* Card style */
+.card{
+  background: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin:10px 0px;
+  padding: 5px;
+  font-size: 0.8em;
+}
+
+.card .flex-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card h3{
+  font-size: 1em;
+}
+
+.card-delete-button{
+  padding: 3px 5px;
+  background: #DFE3ED;
+  border-radius: 5px;
 }
