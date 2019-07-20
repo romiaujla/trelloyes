@@ -2,9 +2,13 @@ import React from 'react';
 
 function Card(props){
     return (
-        <div className={props.className}>
-
-        </div>
+        <li className="card">
+            <div className="flex-div">
+                <h3>{props.title}</h3>
+                <button type="button" class="card-delete-button">delete</button>
+            </div>
+            <p>{props.content}</p>
+        </li>
     );
 }
 
