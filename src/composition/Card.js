@@ -2,12 +2,12 @@ import React from 'react';
 
 class Card extends React.Component {
    
-    static defaultProps = {
-        props: {
-          title:``,
-          content: ``
-        }
-    };
+    // static defaultProps = {
+    //     props: {
+    //       title:``,
+    //       content: ``
+    //     }
+    // };
 
     render(){
         const props = this.props;

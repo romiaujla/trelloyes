@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component renders with title and content 1`] = `
+<li
+  className="card"
+>
+  <div
+    className="flex-div"
+  >
+    <h3>
+      Second card
+    </h3>
+    <button
+      className="card-delete-button"
+      type="button"
+    >
+      delete
+    </button>
+  </div>
+  <p>
+    lorem ipsum
+  </p>
+</li>
+`;
