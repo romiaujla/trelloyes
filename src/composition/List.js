@@ -3,6 +3,13 @@ import Card from './Card.js';
 
 class List extends React.Component {
     
+    static defaultProps = {
+        props: {
+          header:``,
+          cards: []
+        }
+    };
+
     render(){
         const props = this.props;
         return (
