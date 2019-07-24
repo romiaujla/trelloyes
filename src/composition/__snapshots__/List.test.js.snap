@@ -34,6 +34,26 @@ exports[`List Component renders list correctly when props are passed 1`] = `
         lorem ipsum
       </p>
     </li>
+    <li
+      className="card"
+    >
+      <div
+        className="flex-div"
+      >
+        <h3>
+          Second Card
+        </h3>
+        <button
+          className="card-delete-button"
+          type="button"
+        >
+          delete
+        </button>
+      </div>
+      <p>
+        lorem ipsum
+      </p>
+    </li>
   </ul>
   <div
     className="add-random-card"

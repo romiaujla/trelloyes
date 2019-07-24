@@ -11,6 +11,11 @@ describe('List Component', ()=>{
             id: 0,
             title: 'First Card',
             content: 'lorem ipsum'
+        },
+        {
+            id: 1,
+            title: 'Second Card',
+            content: 'lorem ipsum'
         }
     ];
 
