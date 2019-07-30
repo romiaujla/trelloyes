@@ -5,7 +5,6 @@ import renderer from 'react-test-renderer';
 
 describe('List Component', ()=>{
 
-
     const cardData = [
         {
             id: 0,
