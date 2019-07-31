@@ -86,22 +86,31 @@ class App extends React.Component {
 
   }
 
-  // handles the delete button click
-  handleDeleteButtonClick = (cardId, listId) => {
+  omit = (obj, keyToOmit) => {
+    return Object.entries(obj).reduce(
+      (newObj, [key, value]) =>
+          key === keyToOmit ? newObj : {...newObj, [key]: value},
+      {}
+    );
+  }
 
-    const newLists = this.state.lists
+  // handles the delete button click
+  handleDeleteButtonClick = (cardId) => {
+
+    const newLists = this.state.lists;
+    let newAllCards = this.state.allCards;
+    newAllCards = this.omit(newAllCards, cardId);
 
     // removing the card form the list. 
     newLists.map(list => {
-      if(list.id === listId){
-        list.cardIds = list.cardIds.filter( card => card !== cardId);
-      }
+      list.cardIds = list.cardIds.filter( card => card !== cardId);
       return list;
     });
 
     // Just changing the lists item in the state  
     this.setState({
-      lists: newLists
+      lists: newLists,
+      allCards: newAllCards
     })
 
   }

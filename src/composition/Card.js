@@ -10,7 +10,9 @@ class Card extends React.Component {
     }
     
     render(){
+        
         const props = this.props;
+
         return (
             <li className="card">
                 <div className="flex-div">
