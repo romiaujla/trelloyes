@@ -25,6 +25,7 @@ exports[`List Component renders list correctly when props are passed 1`] = `
         </h3>
         <button
           className="card-delete-button"
+          onClick={[Function]}
           type="button"
         >
           delete
@@ -45,6 +46,7 @@ exports[`List Component renders list correctly when props are passed 1`] = `
         </h3>
         <button
           className="card-delete-button"
+          onClick={[Function]}
           type="button"
         >
           delete
@@ -60,6 +62,7 @@ exports[`List Component renders list correctly when props are passed 1`] = `
   >
     <button
       className="add-random-card-button"
+      onClick={[Function]}
       type="button"
     >
       + Add Random Card

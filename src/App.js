@@ -62,16 +62,48 @@ class App extends React.Component {
     }
   }
 
-
   // handles the add random button click
-  handleAddRandomButtonClick = () => {
+  handleAddRandomButtonClick = (id) => {
     const randomCard = this.newRandomCard();
-    console.log(randomCard);
+    const newLists = this.state.lists;
+
+    // adding new card to the list
+    newLists.map((list) => {
+      if(list.id === id){
+        list.cardIds.push(randomCard.id);
+      }
+      return list;
+    });
+
+    // Changing state 
+    this.setState({
+      lists: newLists,
+      allCards: {
+        ...this.state.allCards,
+        [randomCard.id]: randomCard
+      }
+    });
+
   }
 
   // handles the delete button click
-  handleDeleteButtonClick = (id) => {
-    console.log(`delete button clicked`, id);
+  handleDeleteButtonClick = (cardId, listId) => {
+
+    const newLists = this.state.lists
+
+    // removing the card form the list. 
+    newLists.map(list => {
+      if(list.id === listId){
+        list.cardIds = list.cardIds.filter( card => card !== cardId);
+      }
+      return list;
+    });
+
+    // Just changing the lists item in the state  
+    this.setState({
+      lists: newLists
+    })
+
   }
 
   // main render method

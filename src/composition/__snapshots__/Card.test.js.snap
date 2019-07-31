@@ -12,6 +12,7 @@ exports[`Card Component renders with title and content 1`] = `
     </h3>
     <button
       className="card-delete-button"
+      onClick={[Function]}
       type="button"
     >
       delete

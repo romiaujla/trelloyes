@@ -22,11 +22,17 @@ class List extends React.Component {
                 </header>
 
                 <ul className="card-list">
-                    {props.cards.map((card) => <Card key={card.id} title={card.title} content={card.content} id={card.id} handleDeleteButtonClick={this.props.handleDeleteButtonClick}/>)}
+                    {props.cards.map((card) => <Card 
+                                                    key={card.id} 
+                                                    title={card.title} 
+                                                    content={card.content} 
+                                                    id={card.id} 
+                                                    listId={this.props.id}
+                                                    handleDeleteButtonClick={this.props.handleDeleteButtonClick}/>)}
                 </ul>
 
                 <div className="add-random-card">
-                    <button type="button" className="add-random-card-button" onClick={() => this.props.handleAddRandomButtonClick()}>+ Add Random Card</button>
+                    <button type="button" className="add-random-card-button" onClick={() => this.props.handleAddRandomButtonClick(this.props.id)}>+ Add Random Card</button>
                 </div>
             </section>
         );
